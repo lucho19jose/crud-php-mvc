@@ -1,12 +1,7 @@
-<html>
-<head>
-	<title>Add Data</title>
-</head>
-
-<body>
 <?php
 //including the database connection file
-include_once("config.php");
+include_once("../config.php");
+require_once '../parameters.php';
 
 if(isset($_POST['Submit'])) {	
 	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
@@ -39,8 +34,7 @@ if(isset($_POST['Submit'])) {
 		//display success message
 		echo "<font color='green'>Data added successfully.";
 		echo "<br/><a href='index.php'>View Result</a>";
+		header("Location:".base_url."Views/index.php");
 	}
 }
 ?>
-</body>
-</html>

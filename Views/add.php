@@ -1,3 +1,6 @@
+<?php
+require_once '../parameters.php';
+?>
 <html>
 <head>
 	<title>Add Data</title>
@@ -7,7 +10,7 @@
 	<a href="index.php">Home</a>
 	<br/><br/>
 
-	<form action="<?=base_url?>Controllers/add.php" method="post" name="form1">
+	<form action="<?=base_url?>Controllers/addController.php" method="post" name="form1">
 		<table width="25%" border="0">
 			<tr> 
 				<td>Name</td>

@@ -14,7 +14,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
 </head>
 
 <body>
-<a href="add.php">Add New Data</a><br/><br/>
+<a href="<?=base_url?>Views/add.php">Add New Data</a><br/><br/>
 
 	<table width='80%' border=0>
 
@@ -31,7 +31,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
 		echo "<td>".$res['name']."</td>";
 		echo "<td>".$res['age']."</td>";
 		echo "<td>".$res['email']."</td>";	
-		echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";		
+		echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"../Controllers/deleteController.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";		
 	}
 	?>
 	</table>
